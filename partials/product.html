@@ -1,0 +1,24 @@
+<section id="main">
+    <a href="./#/products">
+        <- Back to product listings</a>
+            <p />
+            <nav>
+                <div>
+                    Name: {{name}}
+                    <br/> Description: {{desc}}
+                    <br/> Price: {{price}}(USD)
+                    <p />
+                </div>
+                <div id='comments'>
+                    Post a comment
+                    <form ng-controller="commentsController">
+                        <textarea ng-model="txtcomment" placeholder="Your Comment" style='width:300px'></textarea>
+                        <button ng-click='btn_add();'>Post Comment</button>
+                        <h4>Comments</h4>
+                        <ul>
+                            <li ng-repeat="com in comment">{{com}}</li>
+                        </ul>
+                    </form>
+                </div>
+            </nav>
+</section>

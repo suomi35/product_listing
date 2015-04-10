@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="4">Super Awesome product listing app</th>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in productsList">
+            <td>{{$index + 1}}</td>
+            <td><a href="#/products/{{product.id}}">{{product.name}}</a></td>
+            <td>{{product.desc}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+<p />
+<button type="button" onclick="window.location.href='#/addnew'">Add a new product</button>
